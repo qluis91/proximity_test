@@ -10,6 +10,7 @@ function buscar(){
                 data: 'word='+word,
                 beforeSend:function() {  
                  $('.loader').show();
+				 $('#myTable').html('');
                 },
                 error: function(){
                   
@@ -24,8 +25,9 @@ function buscar(){
                 }
 	});
     }else{
-        $('#search_word').css("border", "3px solid red");
+		$('#search_word').css("border", "3px solid red");
         $('#error_empty').show();
+		$('#myTable').html(''); 
     }
   }
   
